@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #29251f;
+  background: #f8f7f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; }
+a { color: inherit; text-decoration: none; }
+.text-terracotta { color: #b7644b; }
+.brand-mark { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: 50% 50% 46% 50%; background: #b7644b; color: #fffaf5; font-family: Georgia, serif; font-size: 1.55rem; font-style: italic; }
+.eyebrow { display: flex; align-items: center; gap: .55rem; color: #9a6a54; font-size: .75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.eyebrow span { font-size: 1.1rem; }
+.explore-button { background: #b7644b; color: white; box-shadow: 0 8px 22px rgb(144 73 52 / 18%); transition: background .2s, transform .2s, box-shadow .2s; }
+.explore-button:hover { transform: translateY(-2px); background: #a9553d; box-shadow: 0 12px 25px rgb(144 73 52 / 24%); }
+.explore-button:focus-visible, a:focus-visible { outline: 3px solid #db9b82; outline-offset: 4px; }
+.photo-stage { position: relative; height: 22rem; }
+.photo-card { position: absolute; overflow: hidden; border: 8px solid #fffdf9; background: #fffdf9; box-shadow: 0 22px 55px rgb(74 56 42 / 14%); }
+.photo-card-main { z-index: 2; top: 1rem; left: 8%; width: 72%; height: 19rem; transform: rotate(-4deg); border-radius: 10px; }
+.photo-card-back { top: 4.3rem; right: 3%; width: 57%; height: 15rem; transform: rotate(7deg); border-radius: 10px; }
+.garden-scene, .sunset-scene { position: relative; height: calc(100% - 2rem); overflow: hidden; border-radius: 3px; }
+.garden-scene { background: #e8b99a; }
+.garden-sky { position: absolute; inset: 0 0 35%; background: linear-gradient(155deg,#f2d5b5 0%,#e8a98d 100%); }
+.garden-sun { position: absolute; top: 15%; right: 19%; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #f8e3b3; }
+.garden-hill { position: absolute; right: -10%; bottom: -30%; left: -10%; height: 75%; border-radius: 50% 50% 0 0; background: linear-gradient(150deg,#72835d,#465d49); }
+.garden-flower { position: absolute; z-index: 1; color: #f3d5a6; text-shadow: 0 1px 8px rgb(65 66 48 / 24%); }
+.flower-one { bottom: 26%; left: 18%; font-size: 1.8rem; }.flower-two { bottom: 15%; left: 40%; font-size: 1.2rem; }.flower-three { bottom: 37%; right: 20%; font-size: 1.4rem; }.flower-four { bottom: 12%; right: 12%; font-size: 1.9rem; }
+.sunset-scene { background: linear-gradient(150deg,#f5ceaa 0%,#e89979 62%,#ad675a 100%); }
+.scene-sun { position: absolute; top: 15%; right: 20%; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: #ffe2ad; }
+.scene-hill { position: absolute; right: -15%; bottom: -45%; left: -15%; height: 83%; border-radius: 50% 50% 0 0; background: #6a7160; }
+.scene-hill-two { right: 25%; bottom: -52%; left: -30%; background: #8a705d; }
+.photo-caption { display: flex; height: 2rem; align-items: center; justify-content: center; color: #77695d; font-family: Georgia, serif; font-size: .74rem; font-style: italic; }
+.floating-note { position: absolute; z-index: 3; right: 0; bottom: 1.25rem; display: flex; align-items: center; gap: .5rem; border: 1px solid #eee5d8; border-radius: 999px; background: #fffdf9; padding: .7rem 1rem; color: #716658; font-family: Georgia, serif; font-size: .85rem; box-shadow: 0 8px 25px rgb(74 56 42 / 11%); transform: rotate(3deg); }
+.floating-note span { color: #bb7258; }
+.stage-sparkle { position: absolute; color: #c68d62; }.sparkle-one { top: 0; right: 18%; font-size: 1.3rem; }.sparkle-two { bottom: 3rem; left: 2%; font-size: 1.6rem; color: #dfb275; }
+@media (min-width: 768px) { .photo-stage { height: 27rem; }.photo-card-main { top: 1rem; height: 23rem; }.photo-card-back { top: 4.3rem; height: 18rem; }.floating-note { right: -1rem; bottom: 2rem; } }
+@media (max-width: 420px) { .photo-stage { height: 19rem; }.photo-card-main { height: 16.5rem; }.photo-card-back { top: 3.5rem; height: 13rem; }.floating-note { right: 0; bottom: .7rem; font-size: .75rem; } }
