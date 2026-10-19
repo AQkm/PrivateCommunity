@@ -48,7 +48,7 @@ function App() {
   useEffect(() => {
     void pb.collection('Events').getFullList<EventRecord>({ sort: '-date' })
       .then(setEvents)
-      .catch(() => setError('Could not load the timeline. Check that PocketBase is running.'));
+      .catch((error: unknown) => console.error('Could not load the timeline from PocketBase.', error));
   }, []);
 
   async function createEvent(event: React.FormEvent<HTMLFormElement>) {
